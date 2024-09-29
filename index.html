@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">  <!-- Made by Temuk -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cool Password Generator</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Unicon Icons -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="password-box">
+        <input type="text" id="password" readonly />
+        <i class="uil uil-copy copy-icon"></i>
+      </div>
+
+      <div class="strength">
+        <span class="strength-label">Strength: </span>
+        <span id="strength-level" class="strength-level">Weak</span>
+      </div>
+
+      <div class="range-box">
+        <input type="range" min="6" max="40" value="12" />
+        <span class="slider-number">12</span>
+      </div>
+
+      <div class="options-box">
+        <label><input type="checkbox" id="include-uppercase" checked /> Uppercase</label>
+        <label><input type="checkbox" id="include-numbers" checked /> Numbers</label>
+        <label><input type="checkbox" id="include-symbols" checked /> Symbols</label>
+      </div>
+
+      <button class="generate-button">Generate Password</button>
+
+      <div class="theme-switcher">
+        <label class="switch">
+          <input type="checkbox" id="theme-toggle">
+          <span class="slider"></span>
+        </label>
+        <span class="theme-label">Dark Mode</span>
+      </div>
+
+      <!-- Copy Notification -->
+      <div id="toast" class="toast">Copied to clipboard!</div>
+    </div>
+  </body>
+</html>
